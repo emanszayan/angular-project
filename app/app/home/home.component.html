@@ -1,0 +1,199 @@
+<div>
+    <app-header></app-header>
+  </div>
+  <div class="card-deck">
+      <div class="card">
+        <a (click)="addcart('/cart','HT-1000')"><img src="{{product[0].ProductPicUrl}}" class="card-img-top" alt="..." ></a>
+        <div class="card-body">
+          <h5 class="card-title">{{product[0].Name}}</h5>
+
+          <p class="card-text">{{product[0].Price}}</p>
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-primary" (click)="addcart('/cart','1')">add to cart</button>{{'  '}}
+            <button class="btn btn-primary" (click)="wish('/wishlist')" >add to wishlist</button>
+         
+        </div>
+        
+      </div>
+      <div class="card">
+          <a (click)="addcart('/cart','HT-1001')"><img src="{{product[1].ProductPicUrl}}" class="card-img-top" alt="..." ></a>
+
+          <div class="card-body">
+            <h5 class="card-title">{{product[1].Name}}</h5>
+            <p class="card-text">{{product[1].Price}}</p>
+          </div>
+          <div class="card-footer">
+              <button class="btn btn-primary" (click)="addcart('/cart','2')">add to cart</button>{{'  '}}
+            <button class="btn btn-primary" (click)="wish('/wishlist')" >add to wishlist</button>
+              
+          </div>
+          
+        </div>
+        <div class="card">
+        <a (click)="addcart('/cart','HT-1002')"><img src="{{product[2].ProductPicUrl}}" class="card-img-top" alt="..." ></a>
+
+          
+            <div class="card-body">
+              <h5 class="card-title">{{product[2].Name}}</h5>
+              <p class="card-text">{{product[2].Price}}</p>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-primary" (click)="addcart('/cart','3')">add to cart</button>{{'  '}}
+            <button class="btn btn-primary" (click)="wish('/wishlist')" >add to wishlist</button>
+             
+            </div>
+            
+          </div>
+      
+    </div>
+
+    <div class="card-deck">
+        <div class="card">
+        <a (click)="addcart('/cart','HT-1003')"><img src="{{product[3].ProductPicUrl}}" class="card-img-top" alt="..." ></a>
+        
+          <div class="card-body">
+            <h5 class="card-title">{{product[3].Name}}</h5>
+  
+            <p class="card-text">{{product[3].Price}}</p>
+          </div>
+          <div class="card-footer">
+              <button class="btn btn-primary" (click)="addcart('/cart','4')">add to cart</button>{{'  '}}
+            <button class="btn btn-primary" (click)="wish('/wishlist')" >add to wishlist</button>
+          </div>
+          
+        </div>
+        <div class="card">
+        <a (click)="addcart('/cart','HT-1007')"><img src="{{product[4].ProductPicUrl}}" class="card-img-top" alt="..." ></a>
+        
+            <div class="card-body">
+              <h5 class="card-title">{{product[4].Name}}</h5>
+              <p class="card-text">{{product[4].Price}}</p>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-primary" (click)="addcart('/cart','5')">add to cart</button>{{'  '}}
+            <button class="btn btn-primary" (click)="wish('/wishlist')" >add to wishlist</button>
+            </div>
+            
+          </div>
+          <div class="card">
+        <a (click)="addcart('/cart','HT-1010')"><img src="{{product[5].ProductPicUrl}}" class="card-img-top" alt="..." ></a>
+              
+              <div class="card-body">
+                <h5 class="card-title">{{product[5].Name}}</h5>
+                <p class="card-text">{{product[5].Price}}</p>
+              </div>
+              <div class="card-footer">
+                  <button class="btn btn-primary" (click)="addcart('/cart','6')">add to cart</button>{{'  '}}
+            <button class="btn btn-primary" (click)="wish('/wishlist')" >add to wishlist</button>
+              
+              </div>
+              
+            </div>
+        
+      </div>
+
+
+
+      <div class="card-deck">
+          <div class="card">
+        <a (click)="addcart('/cart','HT-1011')"><img src="{{product[6].ProductPicUrl}}" class="card-img-top" alt="..." ></a>
+          
+            <div class="card-body">
+              <h5 class="card-title">{{product[6].Name}}</h5>
+    
+              <p class="card-text">{{product[6].Price}}</p>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-primary" (click)="addcart('/cart','7')">add to cart</button>{{'  '}}
+            <button class="btn btn-primary" (click)="wish('/wishlist')" >add to wishlist</button>
+            </div>
+            
+          </div>
+          <div class="card">
+        <a (click)="addcart('/cart','HT-1020')"><img src="{{product[7].ProductPicUrl}}" class="card-img-top" alt="..." ></a>
+      
+              <div class="card-body">
+                <h5 class="card-title">{{product[7].Name}}</h5>
+                <p class="card-text">{{product[7].Price}}</p>
+              </div>
+              <div class="card-footer">
+                  <button class="btn btn-primary" (click)="addcart('/cart','8')">add to cart</button>{{'  '}}
+            <button class="btn btn-primary" (click)="wish('/wishlist')" >add to wishlist</button>
+              </div>
+              
+            </div>
+            <div class="card">
+        <a (click)="addcart('/cart','HT-1021')"><img src="{{product[8].ProductPicUrl}}" class="card-img-top" alt="..." ></a>
+                
+                <div class="card-body">
+                  <h5 class="card-title">{{product[8].Name}}</h5>
+                  <p class="card-text">{{product[8].Price}}</p>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-primary" (click)="addcart('/cart','9')">add to cart</button>{{'  '}}
+            <button class="btn btn-primary" (click)="wish('/wishlist')" >add to wishlist</button>
+                </div>
+                
+              </div>
+          
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <div class="card-group" *ngFor="let item of product;let i=index;">
+      <div class="card">
+        <img src="{{item.ProductPicUrl}}" class="card-img-top" >
+        <div class="card-body">
+          <h5 class="card-title">product name: {{item.Name}}</h5>
+          <p class="card-text">price :{{item.Price}} </p>
+          <button class="btn btn-primary" (click)="addcart('/cart','1')">add to cart</button>{{'  '}}
+            <button class="btn btn-primary" (click)="wish('/wishlist')" >add to wishlist</button>
+            <button class="btn btn-primary" (click)="wish('/wishlist')" >add to wishlist</button>
+        <button class="btn btn-primary" >view details</button>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+  </div>  -->
+
+  <!-- <div class="container"> -->
+      <!-- Example row of columns -->
+<!-- 
+  <div class="home">
+      <div class="row">
+          
+       
+        <div  class ="coll" >
+            <ng-container *ngFor="let item of product;let i=index;">
+          <span>product name: {{item.Name}}</span><br>
+          <span>price :{{item.Price}}   </span><br>
+        <br>
+          <img src="{{item.ProductPicUrl}}" height="100px" width="100px">
+      <br>
+        <button class="btn btn-primary" (click)="addcart('/cart','1')">add to cart</button>{{'  '}}
+        <button class="btn btn-primary" >view details</button>
+     
+      </ng-container>
+       </div> -->
+  
+       <!-- </div>
+      <hr>
+    </div>
+<div>  -->
+  
+  <div>
+  <app-footer></app-footer>
+</div>
+
+
+
+ 

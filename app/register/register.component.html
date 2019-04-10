@@ -1,0 +1,76 @@
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label>
+      User Name: <br>
+      <input type="text" formControlName="Name" placeholder=" your name" >
+    </label>
+    <div *ngIf="!profileForm.controls.Name.valid ">
+      Name is required min 4.
+    </div>
+  <br>
+    <label>
+      User Email: <br>
+      <input type="email" formControlName="email" placeholder=" your email">
+    </label>
+    <div *ngIf="!profileForm.controls.email.valid ">
+    user email is required.
+    </div>
+  <br>
+  <label>
+      User passsword:
+      <br>
+    <input type="password" formControlName="password" >
+  </label>
+  <div *ngIf="!profileForm.controls.password.valid ">
+      password is required.
+  </div>
+  <br>
+    <label>
+        Date Of Birth: <br>
+      <input type="date" formControlName="dateOfBirth">
+    </label>
+    <div *ngIf="!profileForm.controls.dateOfBirth.valid ">
+        Date Of Birth is required.
+    </div>
+    <br>
+    
+    
+    
+    <button type="submit" class="btn btn-primary" [disabled]="!profileForm.valid">Sign UP</button>
+    <button type="reset" class="btn btn-danger" >Reset</button>
+  
+  </div>
+  </form>
+
+  <!-- <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"  formControlName="email">
+        <div *ngIf="!profileForm.controls.email.valid ">
+            user email is required.
+            </div>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password">
+        <div *ngIf="!profileForm.controls.passsword.valid ">
+            passsword is required.
+        </div>
+      </div>
+     
+      <div class="form-group">
+          <label for="exampleInputName">User Name</label>
+          <input type="text" class="form-control" id="exampleInputName"  placeholder="Enter Name"  formControlName="Name">
+          <div *ngIf="!profileForm.controls.Name.valid ">
+              user Name is required.
+              </div>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputdateOfBirth">Date Of Birth</label>
+            <input type="date" class="form-control" id="exampleInputdateOfBirth" formControlName="dateOfBirth">
+            <div *ngIf="!profileForm.controls.dateOfBirth.valid">
+                user dateOfBirth is required.
+                </div>
+          </div>
+      <button type="submit" class="btn btn-primary" [disabled]="!profileForm.valid">Submit</button>
+    </form> -->

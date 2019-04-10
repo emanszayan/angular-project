@@ -1,0 +1,28 @@
+<div class="login">
+<form [formGroup]="loginform" (ngSubmit)="onSubmit('/home')">
+  <label class="label">
+    User Email: <br>
+    <input type="email" formControlName="email">
+  </label>
+  <div *ngIf="!loginform.controls.email.valid ">
+  user email is required.
+  </div>
+<br>
+<br>
+
+  <label class="label">
+      User passsword:
+      <br>
+    <input type="password" formControlName="passsword">
+  </label>
+  <div *ngIf="!loginform.controls.passsword.valid ">
+      passsword is required.
+  </div>
+  <br>
+  <br>
+  
+  <button  type="submit" [disabled]="!loginform.valid">Sign In</button>
+  <button  (click)="navigateTo('/register')" >Sign Up</button>
+
+</form>
+</div>
