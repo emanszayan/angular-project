@@ -12,6 +12,9 @@ export class HomeComponent implements OnInit {
   public cart:number=0;
   public wishlist:number=0;
   public nwishlist:number;
+  public name:Array<string>;
+  public price:Array<number>;
+
   constructor(private router: Router, private route: ActivatedRoute,private service:StorageService) {
     this.product=this.service.getallproduct();
   }
@@ -19,16 +22,22 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
   }
-  addcart(path: string,id:string): void {
-    this.router.navigate([path, id]);
+  addcart(): void {
+    // this.router.navigate([path, id]);
     // this.service.getallproduct();
-    this.cart=this.cart+1;
-
+    this.cart++;
+    console.log(this.cart);
   }
-  wish(path: string): any {
-    this.router.navigate([path]);
+  getcount(){
+    return this.cart;
+  }
+  wish(name:string,price:number): any {
+    // this.router.navigate([path]);
     // this.service.getallproduct();
-    this.nwishlist=this.nwishlist+1;
+  // list=this.nwishl
+  this.wishlist++;
+    this.name[this.wishlist]=name;
+      this.price[this.wishlist]=price;
     console.log(this.nwishlist);
     return this.wishlist;
 

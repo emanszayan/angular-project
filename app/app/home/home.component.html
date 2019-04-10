@@ -1,5 +1,5 @@
 <div>
-    <app-header></app-header>
+    <app-header [cart]='cart' [wishlist]='wishlist' [wish]='wish'></app-header>
   </div>
   <div class="card-deck">
       <div class="card">
@@ -10,8 +10,8 @@
           <p class="card-text">{{product[0].Price}}</p>
         </div>
         <div class="card-footer">
-            <button class="btn btn-primary" (click)="addcart('/cart','1')">add to cart</button>{{'  '}}
-            <button class="btn btn-primary" (click)="wish('/wishlist')" >add to wishlist</button>
+            <button class="btn btn-primary" (click)="addcart()">add to cart</button>{{'  '}}
+            <button class="btn btn-primary" (click)="wish('product[0].Name','product[0].Price')" >add to wishlist</button>
          
         </div>
         
@@ -24,8 +24,8 @@
             <p class="card-text">{{product[1].Price}}</p>
           </div>
           <div class="card-footer">
-              <button class="btn btn-primary" (click)="addcart('/cart','2')">add to cart</button>{{'  '}}
-            <button class="btn btn-primary" (click)="wish('/wishlist')" >add to wishlist</button>
+              <button class="btn btn-primary" (click)="addcart()">add to cart</button>{{'  '}}
+            <button class="btn btn-primary" (click)="wish('product[1].Name','product[1].Price')">add to wishlist</button>
               
           </div>
           
@@ -39,8 +39,8 @@
               <p class="card-text">{{product[2].Price}}</p>
             </div>
             <div class="card-footer">
-                <button class="btn btn-primary" (click)="addcart('/cart','3')">add to cart</button>{{'  '}}
-            <button class="btn btn-primary" (click)="wish('/wishlist')" >add to wishlist</button>
+                <button class="btn btn-primary" (click)="addcart()">add to cart</button>{{'  '}}
+            <button class="btn btn-primary" (click)="wish('product[2].Name','product[2].Price')" >add to wishlist</button>
              
             </div>
             
@@ -58,8 +58,8 @@
             <p class="card-text">{{product[3].Price}}</p>
           </div>
           <div class="card-footer">
-              <button class="btn btn-primary" (click)="addcart('/cart','4')">add to cart</button>{{'  '}}
-            <button class="btn btn-primary" (click)="wish('/wishlist')" >add to wishlist</button>
+              <button class="btn btn-primary" (click)="addcart()">add to cart</button>{{'  '}}
+            <button class="btn btn-primary" (click)="wish('product[3].Name','product[3].Price')" >add to wishlist</button>
           </div>
           
         </div>
@@ -71,8 +71,8 @@
               <p class="card-text">{{product[4].Price}}</p>
             </div>
             <div class="card-footer">
-                <button class="btn btn-primary" (click)="addcart('/cart','5')">add to cart</button>{{'  '}}
-            <button class="btn btn-primary" (click)="wish('/wishlist')" >add to wishlist</button>
+                <button class="btn btn-primary" (click)="addcart()">add to cart</button>{{'  '}}
+            <button class="btn btn-primary" (click)="wish('product[4].Name','product[4].Price')" >add to wishlist</button>
             </div>
             
           </div>
@@ -84,8 +84,8 @@
                 <p class="card-text">{{product[5].Price}}</p>
               </div>
               <div class="card-footer">
-                  <button class="btn btn-primary" (click)="addcart('/cart','6')">add to cart</button>{{'  '}}
-            <button class="btn btn-primary" (click)="wish('/wishlist')" >add to wishlist</button>
+                  <button class="btn btn-primary" (click)="addcart()">add to cart</button>{{'  '}}
+            <button class="btn btn-primary" (click)="wish('product[5].Name','product[5].Price')" >add to wishlist</button>
               
               </div>
               
@@ -105,8 +105,8 @@
               <p class="card-text">{{product[6].Price}}</p>
             </div>
             <div class="card-footer">
-                <button class="btn btn-primary" (click)="addcart('/cart','7')">add to cart</button>{{'  '}}
-            <button class="btn btn-primary" (click)="wish('/wishlist')" >add to wishlist</button>
+                <button class="btn btn-primary" (click)="addcart()">add to cart</button>{{'  '}}
+            <button class="btn btn-primary" (click)="wish('product[6].Name','product[6].Price')" >add to wishlist</button>
             </div>
             
           </div>
@@ -118,8 +118,8 @@
                 <p class="card-text">{{product[7].Price}}</p>
               </div>
               <div class="card-footer">
-                  <button class="btn btn-primary" (click)="addcart('/cart','8')">add to cart</button>{{'  '}}
-            <button class="btn btn-primary" (click)="wish('/wishlist')" >add to wishlist</button>
+                  <button class="btn btn-primary" (click)="addcart()">add to cart</button>{{'  '}}
+            <button class="btn btn-primary" (click)="wish('product[7].Name','product[7].Price')" >add to wishlist</button>
               </div>
               
             </div>
@@ -131,8 +131,8 @@
                   <p class="card-text">{{product[8].Price}}</p>
                 </div>
                 <div class="card-footer">
-                    <button class="btn btn-primary" (click)="addcart('/cart','9')">add to cart</button>{{'  '}}
-            <button class="btn btn-primary" (click)="wish('/wishlist')" >add to wishlist</button>
+                    <button class="btn btn-primary" (click)="addcart()">add to cart</button>{{'  '}}
+            <button class="btn btn-primary" (click)="wish('product[8].Name','product[8].Price')" >add to wishlist</button>
                 </div>
                 
               </div>
