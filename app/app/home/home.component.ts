@@ -48,7 +48,18 @@ return localStorage.getItem('cart');
     this.name[this.wishlist]=name;
       this.price[this.wishlist]=price;
     // console.log(this.nwishlist);
+    if( localStorage.getItem('namepro')=='null')
+    {
+    localStorage.setItem('namepro',JSON.stringify(this.name));
+    localStorage.setItem('pricepro',JSON.stringify(this.price));
+    }
+    else{
+      this.name.push(JSON.stringify(this.name));
+      // this.price.push(this.price));
+      
+    }
     return localStorage.getItem('wishlist');
+
 
 
   }

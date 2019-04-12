@@ -11,8 +11,8 @@
     
   </div> -->
   <button (click)="gotohome('/home')">home</button>
-  <h3>Cart Info</h3>
-<table border="1">
+  <h3>wishlist Info</h3>
+<!-- <table border="1">
     <tr>
         <th>Option</th>
         <th>Id</th>
@@ -34,6 +34,31 @@
         <td>{{item.product.Price}}</td>
         <td>{{item.quantity}}</td>
         <td>{{item.product.Price * item.quantity}}</td>
+    </tr>
+
+</table> -->
+<table border="1">
+    <tr>
+        <th>Option</th>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Photo</th>
+        <th>Price</th>
+        
+      
+    </tr>
+    
+    <tr *ngIf="name==product[i].Name">
+        <td align="center">
+            <a (click)="remove(item.product.ProductId)">X</a>
+        </td>
+        <td>{{product.ProductId}}</td>
+        <td>{{product.Name}}</td>
+        <td>
+            <img src="{{product.ProductPicUrl}}" width="50">
+        </td>
+        <td>{{product.Price}}</td>
+     d>
     </tr>
 
 </table>
