@@ -11,7 +11,7 @@ export class ProductComponent implements OnInit {
   public id:string;
   public product:Array<object>;
   constructor(private router: Router, private route: ActivatedRoute,private service:StorageService) {
-    this.product=this.service.getallproduct();
+    this.product=this.service.findAll();
   }
 
 

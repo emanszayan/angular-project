@@ -11,11 +11,15 @@ export class HeaderComponent implements OnInit {
   @Input('cart') cart :string;
   @Input('wishlist') wishlist :string;
   @Input('wish') wish :any;
+  public user:string;
 
-  constructor(private router: Router, private route: ActivatedRoute) {}
+  constructor(private router: Router, private route: ActivatedRoute) {
+    this.user=(JSON.parse(localStorage.getItem('user'))).Name;
+  }
 
   logout(){
     localStorage.removeItem('userdata');
+    this.router.navigate(['']);
   }
   ngOnInit() {
   }

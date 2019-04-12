@@ -2,45 +2,45 @@
     <app-header [cart]='cart' [wishlist]='wishlist' [wish]='wish'></app-header>
   </div>
   <div class="card-deck">
-      <div class="card">
-        <a (click)="addcart('/cart','HT-1000')"><img src="{{product[0].ProductPicUrl}}" class="card-img-top" alt="..." ></a>
+      <div class="card" > 
+        <a (click)="addcart('/product','HT-1000')"><img src="{{products[0].ProductPicUrl}}" class="card-img-top" alt="..." ></a>
         <div class="card-body">
-          <h5 class="card-title">{{product[0].Name}}</h5>
+          <h5 class="card-title">{{products[0].Name}}</h5>
 
-          <p class="card-text">{{product[0].Price}}</p>
+          <p class="card-text">{{products[0].Price}} $</p>
         </div>
         <div class="card-footer">
-            <button class="btn btn-primary" (click)="addcart()">add to cart</button>{{'  '}}
-            <button class="btn btn-primary" (click)="wish('product[0].Name','product[0].Price')" >add to wishlist</button>
+            <button class="btn btn-primary" [routerLink]="['/cart', { id:products[0].ProductId }]" (click)="addcart()">add to cart</button>{{'  '}}
+            <button class="btn btn-primary" (click)="wish('products[0].Name','products[0].Price')" >add to wishlist</button>
          
         </div>
         
       </div>
       <div class="card">
-          <a (click)="addcart('/cart','HT-1001')"><img src="{{product[1].ProductPicUrl}}" class="card-img-top" alt="..." ></a>
+          <a (click)="addcart('/product','HT-1001')"><img src="{{products[1].ProductPicUrl}}" class="card-img-top" alt="..." ></a>
 
           <div class="card-body">
-            <h5 class="card-title">{{product[1].Name}}</h5>
-            <p class="card-text">{{product[1].Price}}</p>
+            <h5 class="card-title">{{products[1].Name}}</h5>
+            <p class="card-text">{{products[1].Price}} $</p>
           </div>
           <div class="card-footer">
-              <button class="btn btn-primary" (click)="addcart()">add to cart</button>{{'  '}}
-            <button class="btn btn-primary" (click)="wish('product[1].Name','product[1].Price')">add to wishlist</button>
+              <button class="btn btn-primary" [routerLink]="['/cart', { id:products[1].ProductId }]" (click)="addcart()">add to cart</button>{{'  '}}
+            <button class="btn btn-primary" (click)="wish('products[1].Name','products[1].Price')">add to wishlist</button>
               
           </div>
           
-        </div>
+        </div>localStorage.getItem('cart');
         <div class="card">
-        <a (click)="addcart('/cart','HT-1002')"><img src="{{product[2].ProductPicUrl}}" class="card-img-top" alt="..." ></a>
+        <a (click)="addcart('/product','HT-1002')"><img src="{{products[2].ProductPicUrl}}" class="card-img-top" alt="..." ></a>
 
           
             <div class="card-body">
-              <h5 class="card-title">{{product[2].Name}}</h5>
-              <p class="card-text">{{product[2].Price}}</p>
+              <h5 class="card-title">{{products[2].Name}}</h5>
+              <p class="card-text">{{products[2].Price}} $</p>
             </div>
             <div class="card-footer">
-                <button class="btn btn-primary" (click)="addcart()">add to cart</button>{{'  '}}
-            <button class="btn btn-primary" (click)="wish('product[2].Name','product[2].Price')" >add to wishlist</button>
+                <button class="btn btn-primary"[routerLink]="['/cart', { id:products[2].ProductId }]" (click)="addcart()">add to cart</button>{{'  '}}
+            <button class="btn btn-primary" (click)="wish('products[2].Name','products[2].Price')" >add to wishlist</button>
              
             </div>
             
@@ -50,42 +50,42 @@
 
     <div class="card-deck">
         <div class="card">
-        <a (click)="addcart('/cart','HT-1003')"><img src="{{product[3].ProductPicUrl}}" class="card-img-top" alt="..." ></a>
+        <a (click)="addcart('/product','HT-1003')"><img src="{{products[3].ProductPicUrl}}" class="card-img-top" alt="..." ></a>
         
           <div class="card-body">
-            <h5 class="card-title">{{product[3].Name}}</h5>
+            <h5 class="card-title">{{products[3].Name}}</h5>
   
-            <p class="card-text">{{product[3].Price}}</p>
+            <p class="card-text">{{products[3].Price}} $</p>
           </div>
           <div class="card-footer">
-              <button class="btn btn-primary" (click)="addcart()">add to cart</button>{{'  '}}
-            <button class="btn btn-primary" (click)="wish('product[3].Name','product[3].Price')" >add to wishlist</button>
+              <button class="btn btn-primary"[routerLink]="['/cart', { id:products[3].ProductId }]" (click)="addcart()">add to cart</button>{{'  '}}
+            <button class="btn btn-primary" (click)="wish('products[3].Name','products[3].Price')" >add to wishlist</button>
           </div>
           
         </div>
         <div class="card">
-        <a (click)="addcart('/cart','HT-1007')"><img src="{{product[4].ProductPicUrl}}" class="card-img-top" alt="..." ></a>
+        <a (click)="addcart('/product','HT-1007')"><img src="{{products[4].ProductPicUrl}}" class="card-img-top" alt="..." ></a>
         
             <div class="card-body">
-              <h5 class="card-title">{{product[4].Name}}</h5>
-              <p class="card-text">{{product[4].Price}}</p>
+              <h5 class="card-title">{{products[4].Name}}</h5>
+              <p class="card-text">{{products[4].Price}} $</p>
             </div>
             <div class="card-footer">
-                <button class="btn btn-primary" (click)="addcart()">add to cart</button>{{'  '}}
-            <button class="btn btn-primary" (click)="wish('product[4].Name','product[4].Price')" >add to wishlist</button>
+                <button class="btn btn-primary" [routerLink]="['/cart', { id:products[4].ProductId }]" (click)="addcart()">add to cart</button>{{'  '}}
+            <button class="btn btn-primary" (click)="wish('products[4].Name','products[4].Price')" >add to wishlist</button>
             </div>
             
           </div>
           <div class="card">
-        <a (click)="addcart('/cart','HT-1010')"><img src="{{product[5].ProductPicUrl}}" class="card-img-top" alt="..." ></a>
+        <a (click)="addcart('/product','HT-1010')"><img src="{{products[5].ProductPicUrl}}" class="card-img-top" alt="..." ></a>
               
               <div class="card-body">
-                <h5 class="card-title">{{product[5].Name}}</h5>
-                <p class="card-text">{{product[5].Price}}</p>
+                <h5 class="card-title">{{products[5].Name}}</h5>
+                <p class="card-text">{{products[5].Price}} $</p>
               </div>
               <div class="card-footer">
-                  <button class="btn btn-primary" (click)="addcart()">add to cart</button>{{'  '}}
-            <button class="btn btn-primary" (click)="wish('product[5].Name','product[5].Price')" >add to wishlist</button>
+                  <button class="btn btn-primary" [routerLink]="['/cart', { id:products[5].ProductId }]"(click)="addcart()">add to cart</button>{{'  '}}
+            <button class="btn btn-primary" (click)="wish('products[5].Name','products[5].Price')" >add to wishlist</button>
               
               </div>
               
@@ -97,49 +97,50 @@
 
       <div class="card-deck">
           <div class="card">
-        <a (click)="addcart('/cart','HT-1011')"><img src="{{product[6].ProductPicUrl}}" class="card-img-top" alt="..." ></a>
+        <a (click)="addcart('/product','HT-1011')"><img src="{{products[6].ProductPicUrl}}" class="card-img-top" alt="..." ></a>
           
             <div class="card-body">
-              <h5 class="card-title">{{product[6].Name}}</h5>
+              <h5 class="card-title">{{products[6].Name}}</h5>
     
-              <p class="card-text">{{product[6].Price}}</p>
+              <p class="card-text">{{products[6].Price}} $</p>
             </div>
             <div class="card-footer">
-                <button class="btn btn-primary" (click)="addcart()">add to cart</button>{{'  '}}
-            <button class="btn btn-primary" (click)="wish('product[6].Name','product[6].Price')" >add to wishlist</button>
+                <button class="btn btn-primary"[routerLink]="['/cart', { id:products[6].ProductId }]" (click)="addcart()">add to cart</button>{{'  '}}
+            <button class="btn btn-primary" (click)="wish('products[6].Name','products[6].Price')" >add to wishlist</button>
             </div>
             
           </div>
           <div class="card">
-        <a (click)="addcart('/cart','HT-1020')"><img src="{{product[7].ProductPicUrl}}" class="card-img-top" alt="..." ></a>
+        <a (click)="addcart('/product','HT-1020')"><img src="{{products[7].ProductPicUrl}}" class="card-img-top" alt="..." ></a>
       
               <div class="card-body">
-                <h5 class="card-title">{{product[7].Name}}</h5>
-                <p class="card-text">{{product[7].Price}}</p>
+                <h5 class="card-title">{{products[7].Name}}</h5>
+                <p class="card-text">{{products[7].Price}} $</p>
               </div>
               <div class="card-footer">
-                  <button class="btn btn-primary" (click)="addcart()">add to cart</button>{{'  '}}
-            <button class="btn btn-primary" (click)="wish('product[7].Name','product[7].Price')" >add to wishlist</button>
+                  <button class="btn btn-primary" [routerLink]="['/cart', { id:products[7].ProductId }]"(click)="addcart()">add to cart</button>{{'  '}}
+            <button class="btn btn-primary" (click)="wish('products[7].Name','products[7].Price')" >add to wishlist</button>
               </div>
               
             </div>
             <div class="card">
-        <a (click)="addcart('/cart','HT-1021')"><img src="{{product[8].ProductPicUrl}}" class="card-img-top" alt="..." ></a>
+        <a (click)="addcart('/product','HT-1021')"><img src="{{products[8].ProductPicUrl}}" class="card-img-top" alt="..." ></a>
                 
                 <div class="card-body">
-                  <h5 class="card-title">{{product[8].Name}}</h5>
-                  <p class="card-text">{{product[8].Price}}</p>
+                  <h5 class="card-title">{{products[8].Name}}</h5>
+                  <p class="card-text">{{products[8].Price}} $ </p>
                 </div>
                 <div class="card-footer">
-                    <button class="btn btn-primary" (click)="addcart()">add to cart</button>{{'  '}}
-            <button class="btn btn-primary" (click)="wish('product[8].Name','product[8].Price')" >add to wishlist</button>
+                    <button class="btn btn-primary"[routerLink]="['/cart', { id:products[8].ProductId }]" (click)="addcart()">add to cart</button>{{'  '}}
+            <button class="btn btn-primary" (click)="wish('products[8].Name','products[8].Price')" >add to wishlist</button>
                 </div>
                 
               </div>
           
         </div>
 
-
+        <!-- <a [routerLink]="['/products']">Products</a> | -->
+        <a [routerLink]="['/cart']">Cart</a>
 
 
 
@@ -156,7 +157,7 @@
         <div class="card-body">
           <h5 class="card-title">product name: {{item.Name}}</h5>
           <p class="card-text">price :{{item.Price}} </p>
-          <button class="btn btn-primary" (click)="addcart('/cart','1')">add to cart</button>{{'  '}}
+          <button class="btn btn-primary" (click)="addcart('/product','1')">add to cart</button>{{'  '}}
             <button class="btn btn-primary" (click)="wish('/wishlist')" >add to wishlist</button>
             <button class="btn btn-primary" (click)="wish('/wishlist')" >add to wishlist</button>
         <button class="btn btn-primary" >view details</button>

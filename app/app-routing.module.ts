@@ -10,6 +10,7 @@ import { WishlistComponent } from './header/wishlist/wishlist.component';
 import { UsernameComponent } from './header/username/username.component';
 import { NavigationComponent } from './header/navigation/navigation.component';
 import { NotfoundComponent } from './app/notfound/notfound.component';
+// import { CartComponent } from './header/cart/cart.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -20,7 +21,9 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'wishlist', component: WishlistComponent},
   { path: 'logout', component: UsernameComponent},
-  { path: 'cart/:id', component: ProductComponent},
+  { path: 'cart', component:CartComponent },
+  { path: 'product/:id', component:ProductComponent },
+
   { path: 'navigate', component: NavigationComponent},
   { path: '**', component:  NotfoundComponent},
 

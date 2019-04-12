@@ -21,8 +21,10 @@ export class RegisterComponent implements OnInit {
     // TODO: Use EventEmitter with form value
     console.log(this.profileForm.value);
     localStorage.setItem(JSON.stringify(this.profileForm.value.Name),JSON.stringify(this.profileForm.value));
+    localStorage.setItem('user',JSON.stringify(this.profileForm.value));
+    
     // TODO: Use EventEmitter with form value
-    console.log("user",JSON.parse(localStorage.getItem('userdata')));
+    console.log("user",JSON.parse(localStorage.getItem('user')).Name);
 
   }
   ngOnInit() {
